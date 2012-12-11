@@ -10,9 +10,9 @@ class Game
         
   def init_grid 
     new_grid = {}
-    Range.new(1, @columns).to_a.each do |_x|
-      Range.new(1, @rows).to_a.each do |_y|
-        new_grid[key(_x,_y)] = false
+    Range.new(1, @columns).to_a.each do |x_|
+      Range.new(1, @rows).to_a.each do |y_|
+        new_grid[key(x_, y_)] = false
       end      
     end
     new_grid
