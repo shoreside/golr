@@ -78,25 +78,26 @@ describe Game do
     end      
   end
   
-  it "foo" do
-    game = Game.new(5,5)
+  context '#next_generation' do
+    it "compultes next two generations for an oscillator" do
+      game = Game.new(5,5)
     
-    game.set_alive(3,2)
-    game.set_alive(3,3)
-    game.set_alive(3,4)
+      game.set_alive(3,2)
+      game.set_alive(3,3)
+      game.set_alive(3,4)
     
-    next_grid = game.next_generation
+      next_grid = game.next_generation
     
-    next_grid[game.key(2,3)].should be_true
-    next_grid[game.key(3,3)].should be_true
-    next_grid[game.key(4,3)].should be_true   
+      next_grid[game.key(2,3)].should be_true
+      next_grid[game.key(3,3)].should be_true
+      next_grid[game.key(4,3)].should be_true   
     
-    next_next_grid = game.next_generation(next_grid)
+      next_next_grid = game.next_generation(next_grid)
     
-    next_next_grid[game.key(3,2)].should be_true
-    next_next_grid[game.key(3,3)].should be_true
-    next_next_grid[game.key(3,4)].should be_true    
-  end   
-  
+      next_next_grid[game.key(3,2)].should be_true
+      next_next_grid[game.key(3,3)].should be_true
+      next_next_grid[game.key(3,4)].should be_true    
+    end   
+  end  
     
 end
