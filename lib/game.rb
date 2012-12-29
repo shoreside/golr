@@ -18,7 +18,7 @@ class Game
     new_grid
   end
   
-  def next_generation(current_grid = nil)               
+  def evolve(current_grid = nil)               
     next_grid = init_grid              
     @grid = current_grid if current_grid
     @grid.each_key do |key|
