@@ -5,7 +5,7 @@ Ruby implementation of GOL, initiated at Global Day of Coderetreat 2012
 
 Next
 
-- Gemfification
+- Gemification
 - make board 'infite'
 - Visualization
 
