@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
 
-group :test do
-  gem 'rspec', '2.12.0'
-end
+# Specify your gem's dependencies in gol.gemspec
+gemspec
