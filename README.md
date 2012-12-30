@@ -5,6 +5,7 @@ Ruby implementation of GOL, initiated at Global Day of Coderetreat 2012
 
 Next
 
+- add more examples and provide rspec matcher for grid
 - make board 'infinite'
 - Visualization
 - Performance

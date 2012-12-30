@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "Gol"
+  gem.name          = "gol"
   gem.require_paths = ["lib"]
   gem.version       = Gol::VERSION
   gem.add_development_dependency('rspec', '~> 2.12.0')
