@@ -5,12 +5,15 @@ Ruby implementation of GOL, initiated at Global Day of Coderetreat 2012
 
 Next
 
-- add more examples and provide rspec matcher for grid
+- add more examples (glider, dying population, ...)
+- low-ceremony initialization method to speed up example definition
 - make board 'infinite'
 - Visualization
 - Performance
 
 # Changelog
+
+- there is now an rspec matcher for grids (cell states)
 
 ## 0.2.0
 - Gol is now a Ruby Gem

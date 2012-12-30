@@ -87,17 +87,14 @@ describe Game do
       game.set_alive(3,3)
       game.set_alive(3,4)
 
+      initial_grid = game.grid
       next_grid = game.evolve
 
       next_grid[game.key(2,3)].should be_true
       next_grid[game.key(3,3)].should be_true
       next_grid[game.key(4,3)].should be_true
 
-      next_next_grid = game.evolve(next_grid)
-
-      next_next_grid[game.key(3,2)].should be_true
-      next_next_grid[game.key(3,3)].should be_true
-      next_next_grid[game.key(3,4)].should be_true
+      game.evolve(next_grid).should have_same_cell_states_as initial_grid
     end
 
     it "computes a behive which is one example for a still life" do
@@ -110,17 +107,9 @@ describe Game do
       game.set_alive(4,4)
       game.set_alive(5,3)
 
-      next_grid = game.evolve
+      initial_grid = game.grid
 
-      next_grid[game.key(2,3)].should be_true
-      next_grid[game.key(3,2)].should be_true
-      next_grid[game.key(3,4)].should be_true
-      next_grid[game.key(4,2)].should be_true
-      next_grid[game.key(4,4)].should be_true
-      next_grid[game.key(5,3)].should be_true
-
-      GameSpecHelper.count_cells_alive(game.grid).should == 6
-
+      game.evolve.should have_same_cell_states_as initial_grid
     end
 
   end

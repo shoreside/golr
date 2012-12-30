@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Gol (0.1.0)
+    gol (0.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -20,5 +20,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Gol!
+  gol!
   rspec (~> 2.12.0)
