@@ -15,7 +15,7 @@ class Game
     Range.new(1, @columns).to_a.each do |x|
       Range.new(1, @rows).to_a.each do |y|
         _key = key(x, y)
-        new_grid[key(x, y)] = living_cells.include?(_key) ? true : false
+        new_grid[_key] = living_cells.include?(_key) ? true : false
       end
     end
     new_grid
