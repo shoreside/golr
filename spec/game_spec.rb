@@ -80,7 +80,7 @@ describe Game do
   end
 
   context '#evolve' do
-    it "compultes next two generations for an oscillator" do
+    it "computes next two generations for an oscillator" do
       game = Game.new(5,5)
 
       game.set_alive(3,2)
@@ -88,13 +88,14 @@ describe Game do
       game.set_alive(3,4)
 
       initial_grid = game.grid
-      next_grid = game.evolve
+      first_generation = game.evolve.grid
 
-      next_grid[game.key(2,3)].should be_true
-      next_grid[game.key(3,3)].should be_true
-      next_grid[game.key(4,3)].should be_true
+      first_generation[game.key(2,3)].should be_true
+      first_generation[game.key(3,3)].should be_true
+      first_generation[game.key(4,3)].should be_true
 
-      game.evolve(next_grid).should have_same_cell_states_as initial_grid
+      second_generation = game.evolve.grid
+      second_generation.should have_same_cell_states_as initial_grid
     end
 
     it "computes a behive which is one example for a still life" do
@@ -109,7 +110,26 @@ describe Game do
 
       initial_grid = game.grid
 
-      game.evolve.should have_same_cell_states_as initial_grid
+      game.evolve.grid.should have_same_cell_states_as initial_grid
+    end
+
+    it "computes a 5-cell glider" do
+      game = Game.new(8,8, ["1_2","2_3","3_1","3_2","3_3"])
+      initial_grid = game.grid
+      # run through 4 iterations and check for down-right-shifted glider
+      4.times.each { game.evolve }
+      shifted_glider = game.grid
+
+      shifted_glider[game.key(1,2)].should be_false
+      shifted_glider[game.key(3,1)].should be_false
+      shifted_glider[game.key(3,2)].should be_false
+      shifted_glider[game.key(3,3)].should be_false
+
+      shifted_glider[game.key(2,3)].should be_true
+      shifted_glider[game.key(3,4)].should be_true
+      shifted_glider[game.key(4,2)].should be_true
+      shifted_glider[game.key(4,3)].should be_true
+      shifted_glider[game.key(4,4)].should be_true
     end
 
   end

@@ -2,32 +2,33 @@ class Game
 
   attr_reader :grid
 
-  def initialize(columns, rows)
+  def initialize(columns, rows, living_cells = [])
     raise "Game must be at least 3 by 3 cells in size" unless columns > 2 && rows > 2
     @columns = columns
     @rows = rows
-    @grid = init_grid
+    @grid = init_grid(living_cells)
     @rules = Rules.new
   end
 
-  def init_grid
+  def init_grid(living_cells = [])
     new_grid = {}
-    Range.new(1, @columns).to_a.each do |x_|
-      Range.new(1, @rows).to_a.each do |y_|
-        new_grid[key(x_, y_)] = false
+    Range.new(1, @columns).to_a.each do |x|
+      Range.new(1, @rows).to_a.each do |y|
+        _key = key(x, y)
+        new_grid[key(x, y)] = living_cells.include?(_key) ? true : false
       end
     end
     new_grid
   end
 
-  def evolve(current_grid = nil)
+  def evolve
     next_grid = init_grid
-    @grid = current_grid if current_grid
     @grid.each_key do |key|
       x, y = coordinates(key)
       next_grid[key] = @rules.evaluate(living_neighbors(x, y), alive?(key))
     end
-    next_grid
+    @grid = next_grid
+    self
   end
 
   def set_alive(x, y)
@@ -62,6 +63,17 @@ class Game
   def coordinates(key)
     split = key.split('_')
     [split[0].to_i, split[1].to_i]
+  end
+
+  def pretty_print(io = STDOUT)
+    printf(io, "\n")
+    Range.new(1, 5).to_a.each do |y|
+      Range.new(1, 5).to_a.each do |x|
+        state_char = grid[key(x,y)] == true ? 'o' : ' '
+        printf(io, state_char)
+      end
+      printf(io, "\n")
+    end
   end
 
 end
