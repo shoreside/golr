@@ -3,6 +3,7 @@ gol-gdcr2012-ruby
 
 Ruby implementation of GOL, initiated at Global Day of Coderetreat 2012
 
+[![Build Status](https://secure.travis-ci.org/mkrogemann/gol-gdcr2012-ruby.png?branch=master)][travis]
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/mkrogemann/gol-gdcr2012-ruby)
 
 Next
