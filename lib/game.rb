@@ -1,6 +1,6 @@
 class Game
 
-  attr_reader :grid
+  attr_reader :grid, :columns, :rows
 
   def initialize(columns, rows, living_cells = [])
     raise "Game must be at least 3 by 3 cells in size" unless columns > 2 && rows > 2
@@ -63,17 +63,6 @@ class Game
   def coordinates(key)
     split = key.split('_')
     [split[0].to_i, split[1].to_i]
-  end
-
-  def pretty_print(io = STDOUT)
-    printf(io, "\n")
-    Range.new(1, 5).to_a.each do |y|
-      Range.new(1, 5).to_a.each do |x|
-        state_char = grid[key(x,y)] == true ? 'o' : ' '
-        printf(io, state_char)
-      end
-      printf(io, "\n")
-    end
   end
 
 end
