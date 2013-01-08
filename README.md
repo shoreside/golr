@@ -9,6 +9,7 @@ Ruby implementation of GOL, initiated at Global Day of Coderetreat 2012
 Next
 
 - avoid duplication (compute, eval, print ... all the same)
+- improve (split) grid_matcher
 - add more examples (dying population, ...)
 - make board 'infinite'
 - Visualization
