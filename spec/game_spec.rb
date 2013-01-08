@@ -4,17 +4,6 @@ require 'game_spec_helper'
 
 describe Game do
 
-  context '#initialize' do
-    it "a Game must have a minimum dimension of 3 by 3 cells" do
-      expect {
-        Game.new(2,3)
-      }.to raise_error
-      expect {
-        Game.new(3,2)
-      }.to raise_error
-    end
-  end
-
   context '#alive?' do
     it "a new Game returns dead cell for any coordinates within its grid boundaries" do
       game = Game.new(5,5)

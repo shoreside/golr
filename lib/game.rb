@@ -3,7 +3,6 @@ class Game
   attr_reader :grid, :columns, :rows
 
   def initialize(columns, rows, living_cells = [])
-    raise "Game must be at least 3 by 3 cells in size" unless columns > 2 && rows > 2
     @columns = columns
     @rows = rows
     @grid = init_grid(living_cells)
