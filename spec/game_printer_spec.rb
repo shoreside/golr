@@ -4,7 +4,7 @@ require 'game_printer'
 
 describe GamePrinter do
 
-  context '#pretty_print' do
+  context '#print' do
 
     it 'produces expected output in given io object (String)' do
       game = Game.new(9,7, ["2_4", "3_5", "1_3", "5_5"])
