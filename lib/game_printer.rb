@@ -7,7 +7,6 @@ class GamePrinter
       end
       printf(io, "\n")
     end
-    io
   end
 
 end
