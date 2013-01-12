@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gol (0.3.0)
+    golr (0.3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -30,5 +30,5 @@ PLATFORMS
 
 DEPENDENCIES
   cucumber (~> 1.2.1)
-  gol!
+  golr!
   rspec (~> 2.12.0)
