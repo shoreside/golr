@@ -41,20 +41,13 @@ describe Game do
     end
 
     it "a new Game with two adjacent living cells returns a count of one living cell around the initial living cell" do
-      game = Game.new(5,5)
-
-      game.set_alive(2,3)
-      game.set_alive(2,4)
+      game = Game.new(5,5, ["2_3", "2_4"])
 
       game.living_neighbors(2,3).should == 1
     end
 
     it "a new Game with three adjacent living cells returns a count of two living cells around the initial living cell" do
-      game = Game.new(5,5)
-
-      game.set_alive(2,3)
-      game.set_alive(2,4)
-      game.set_alive(3,3)
+      game = Game.new(5,5, ["2_3", "2_4", "3_3"])
 
       game.living_neighbors(2,3).should == 2
     end
@@ -70,11 +63,7 @@ describe Game do
 
   context '#evolve' do
     it "computes next two generations for an oscillator" do
-      game = Game.new(5,5)
-
-      game.set_alive(3,2)
-      game.set_alive(3,3)
-      game.set_alive(3,4)
+      game = Game.new(5,5, ["3_2", "3_3", "3_4"])
 
       initial_grid = game.grid
       first_generation = game.evolve.grid
@@ -88,14 +77,7 @@ describe Game do
     end
 
     it "computes a behive which is one example for a still life" do
-      game = Game.new(6,5)
-
-      game.set_alive(2,3)
-      game.set_alive(3,2)
-      game.set_alive(3,4)
-      game.set_alive(4,2)
-      game.set_alive(4,4)
-      game.set_alive(5,3)
+      game = Game.new(6,5, ["2_3","3_2","3_4","4_2","4_4","5_3"])
 
       initial_grid = game.grid
 
