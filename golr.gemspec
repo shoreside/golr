@@ -4,7 +4,7 @@ require File.expand_path('../lib/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Markus Krogemann"]
   gem.email         = ["markus@krogemann.de"]
-  gem.description   = %q{Exposes methods to initialize and evolve a grid (aka 'board') on which Conway's Game of Life takes place}
+  gem.description   = %q{Exposes methods to initialize and evolve a grid of cells that implements the rules of Conway's Game of Life}
   gem.summary       = %q{Conway's Game of Life in a Ruby Gem}
   gem.homepage      = "https://github.com/mkrogemann/golr"
 
