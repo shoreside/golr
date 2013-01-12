@@ -3,8 +3,8 @@ gol-gdcr2012-ruby
 
 Ruby implementation of GOL, initiated at Global Day of Coderetreat 2012
 
-[![Build Status](https://travis-ci.org/mkrogemann/gol-gdcr2012-ruby.png)](https://travis-ci.org/mkrogemann/gol-gdcr2012-ruby)
-[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/mkrogemann/gol-gdcr2012-ruby)
+[![Build Status](https://travis-ci.org/mkrogemann/golr.png)](https://travis-ci.org/mkrogemann/golr)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/mkrogemann/golr)
 
 Next
 
@@ -16,6 +16,11 @@ Next
 - Performance
 
 # Changelog
+
+- rename gem to golr
+- rename github repo to golr
+- add cucumber to do more outside-in testing
+- add .rvmrc
 
 ## 0.3.0
 - there is now an rspec matcher for grids (cell states)

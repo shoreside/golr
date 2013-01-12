@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["markus@krogemann.de"]
   gem.description   = %q{Exposes methods to initialize and evolve a grid (aka 'board') on which Conway's Game of Life takes place}
   gem.summary       = %q{Conway's Game of Life in a Ruby Gem}
-  gem.homepage      = "https://github.com/mkrogemann/gol-gdcr2012-ruby"
+  gem.homepage      = "https://github.com/mkrogemann/golr"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
