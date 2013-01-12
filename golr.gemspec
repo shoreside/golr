@@ -11,8 +11,9 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "gol"
+  gem.name          = "golr"
   gem.require_paths = ["lib"]
-  gem.version       = Gol::VERSION
+  gem.version       = Golr::VERSION
   gem.add_development_dependency('rspec', '~> 2.12.0')
+  gem.add_development_dependency('cucumber', '~> 1.2.1')
 end

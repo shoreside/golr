@@ -1,3 +1,3 @@
-module Gol
+module Golr
   VERSION = "0.3.0"
 end
