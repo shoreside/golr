@@ -10,6 +10,7 @@ Next
 
 - improve (split) grid_matcher
 - add more examples (dying population, ...)
+- eliminate set_alive message
 - make board 'infinite'
 - Visualization
 - Performance
