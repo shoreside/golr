@@ -7,5 +7,5 @@ bundle
 [ -d rspec ] && rm -rf rspec
 bundle exec rspec --out rspec/rspec.xml --format html --out rspec/rspec.html
 
-[ -d cukeresults ] && rm -rf cukeresults
-bundle exec cucumber --format junit --out cukeresults --no-source
+#[ -d cukeresults ] && rm -rf cukeresults
+#bundle exec cucumber --format junit --out cukeresults --no-source
