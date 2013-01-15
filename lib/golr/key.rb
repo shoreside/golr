@@ -2,7 +2,7 @@ module Golr
 
   class Key
 
-    def key(x, y)
+    def self.key(x, y)
       "#{x}_#{y}"
     end
 

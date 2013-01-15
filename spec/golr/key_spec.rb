@@ -11,6 +11,12 @@ module Golr
       end
     end
 
+    context '#key' do
+      it "concatenates two given values into a key (String)" do
+        Key.key(1,3).should == '1_3'
+      end
+    end
+
   end
 
 end

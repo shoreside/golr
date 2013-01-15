@@ -21,6 +21,8 @@ Next
 - rename github repo to golr
 - add cucumber to do more outside-in testing
 - add .rvmrc
+- extract Key class
+- cleanup 'require' statements
 
 ## 0.3.0
 - there is now an rspec matcher for grids (cell states)

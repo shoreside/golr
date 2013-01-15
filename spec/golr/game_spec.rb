@@ -1,6 +1,5 @@
 require 'spec_helper'
 require 'golr/game'
-require 'golr/game_spec_helper'
 
 module Golr
   describe Game do
@@ -9,7 +8,7 @@ module Golr
       it "a new Game returns dead cell for any coordinates within its grid boundaries" do
         game = Game.new(5,5)
 
-        game.alive?(game.key(rand(5),rand(5))).should be_false
+        game.alive?(Key.key(rand(5),rand(5))).should be_false
       end
 
       it "a new Game accepts and returns a living cell at any coordinates within its grid boundaries" do
@@ -18,7 +17,7 @@ module Golr
 
         game.set_alive(x,y)
 
-        game.alive?(game.key(x,y)).should be_true
+        game.alive?(Key.key(x,y)).should be_true
       end
     end
 
@@ -62,9 +61,9 @@ module Golr
         initial_grid = game.grid
         first_generation = game.evolve.grid
 
-        first_generation[game.key(2,3)].should be_true
-        first_generation[game.key(3,3)].should be_true
-        first_generation[game.key(4,3)].should be_true
+        first_generation[Key.key(2,3)].should be_true
+        first_generation[Key.key(3,3)].should be_true
+        first_generation[Key.key(4,3)].should be_true
 
         second_generation = game.evolve.grid
         second_generation.should have_same_cell_states_as initial_grid
@@ -85,16 +84,16 @@ module Golr
         4.times.each { game.evolve }
         shifted_glider = game.grid
 
-        shifted_glider[game.key(1,2)].should be_false
-        shifted_glider[game.key(3,1)].should be_false
-        shifted_glider[game.key(3,2)].should be_false
-        shifted_glider[game.key(3,3)].should be_false
+        shifted_glider[Key.key(1,2)].should be_false
+        shifted_glider[Key.key(3,1)].should be_false
+        shifted_glider[Key.key(3,2)].should be_false
+        shifted_glider[Key.key(3,3)].should be_false
 
-        shifted_glider[game.key(2,3)].should be_true
-        shifted_glider[game.key(3,4)].should be_true
-        shifted_glider[game.key(4,2)].should be_true
-        shifted_glider[game.key(4,3)].should be_true
-        shifted_glider[game.key(4,4)].should be_true
+        shifted_glider[Key.key(2,3)].should be_true
+        shifted_glider[Key.key(3,4)].should be_true
+        shifted_glider[Key.key(4,2)].should be_true
+        shifted_glider[Key.key(4,3)].should be_true
+        shifted_glider[Key.key(4,4)].should be_true
       end
 
     end

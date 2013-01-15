@@ -1,16 +1,14 @@
-require 'game'
-
 module Golr
 
   class GameReader
 
     def from_string(multi_line_string)
       keys = []
-      row = 0
-      columns = how_many_cloumns multi_line_string
+      rows = 0
+      columns = count_columns(multi_line_string)
       multi_line_string.split(/\r?\n/).each do |line|
-        keys << keys_from_line(line, row).flatten
-        row += 1
+        keys << keys_from_line(line, rows).flatten
+        rows += 1
       end
       Game.new(columns, rows, keys)
     end
@@ -22,16 +20,15 @@ module Golr
       keys_in_line = []
       line.gsub!('|','')
       line.each_char do |c|
-        keys_in_line << Game.new(5,5).key(char_in_line, row) if c == 'o'
+        keys_in_line << Key.key(char_in_line, row) if c == 'o'
         char_in_line += 1
       end
-      puts keys_in_line.to_s
       keys_in_line
     end
 
-    def how_many_cloumns(multi_line_string)
+    def count_columns(multi_line_string)
       first_line = multi_line_string.split(/\r?\n/).first
-      first_line.length.size - 2
+      first_line.length.size - 2 # do not count the borders (denoted by '|')
     end
 
   end
