@@ -28,13 +28,7 @@ module Golr
 
     def count_columns(multi_line_string)
       first_line = multi_line_string.split(/\r\n?|\n/).first
-      puts "first_line #{first_line}"
-      puts "124.chr #{124.chr}"
-      puts "|.ord " + '|'.ord.to_s
-      puts first_line.strip
-      puts first_line.strip.bytesize
-      #first_line.length.size - 2 # do not count the borders (denoted by '|')
-      first_line.strip.bytesize - 4
+      first_line.strip.bytesize - 4 # not nice, but works even on Travis, unlike length.size - 2
     end
 
   end

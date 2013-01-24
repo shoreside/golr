@@ -8,7 +8,6 @@ module Golr
     context "#from_string" do
 
       it "should read a multiline description that uses 'o' for active cells" do
-#        pending "some refactoring required before we activate this"
         multi_line_description = <<-eos
           |        |
           |  o     |
@@ -18,10 +17,10 @@ module Golr
           |o      o|
           |        |
         eos
-        puts multi_line_description
         game = GameReader.new.from_string(multi_line_description)
         game.columns.should == 6
         game.rows.should == 7
+        # TODO:
         # game.active_keys.should = []
       end
 
