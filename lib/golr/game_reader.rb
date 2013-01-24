@@ -28,6 +28,7 @@ module Golr
 
     def count_columns(multi_line_string)
       first_line = multi_line_string.split(/\r?\n/).first
+      puts first_line
       first_line.length.size - 2 # do not count the borders (denoted by '|')
     end
 
