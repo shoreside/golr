@@ -18,7 +18,7 @@ module Golr
           |o      o|
           |        |
         eos
-        # puts multi_line_description
+        puts multi_line_description
         game = GameReader.new.from_string(multi_line_description)
         game.columns.should == 6
         game.rows.should == 7
