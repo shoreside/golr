@@ -33,7 +33,8 @@ module Golr
       puts "|.ord " + '|'.ord.to_s
       puts first_line.strip
       puts first_line.strip.bytesize
-      first_line.length.size - 2 # do not count the borders (denoted by '|')
+      #first_line.length.size - 2 # do not count the borders (denoted by '|')
+      first_line.strip.bytesize - 4
     end
 
   end
