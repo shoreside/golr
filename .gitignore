@@ -1,3 +1,4 @@
 /*.gem
 /rspec
-/cukeresults
+/Gemfile.lock
+/coverage

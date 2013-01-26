@@ -5,6 +5,11 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+if ENV['COVERAGE'] == 'true'
+  require 'simplecov'
+  SimpleCov.start
+end
+
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
@@ -17,4 +22,5 @@ RSpec.configure do |config|
   config.order = 'random'
 end
 
+# require custom RSpec matchers
 Dir[File.dirname(__FILE__) + "/support/matchers/*.rb"].each { |f| require f }

@@ -4,16 +4,15 @@ require File.expand_path('../lib/golr/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Markus Krogemann"]
   gem.email         = ["markus@krogemann.de"]
-  gem.description   = %q{Exposes methods to initialize and evolve a grid of cells that implements the rules of Conway's Game of Life}
-  gem.summary       = %q{Conway's Game of Life in a Ruby Gem}
+  gem.description   = %q{Offers methods to initialize and evolve a grid of cells, implementing the rules of Conway's Game of Life}
+  gem.summary       = %q{Conway's Game of Life}
   gem.homepage      = "https://github.com/mkrogemann/golr"
 
-  gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.files         = Dir['lib/**/*.rb']
+  gem.test_files    = []
   gem.name          = "golr"
   gem.require_paths = ["lib"]
   gem.version       = Golr::VERSION
   gem.add_development_dependency('rspec', '~> 2.12.0')
-  gem.add_development_dependency('cucumber', '~> 1.2.1')
+  gem.add_development_dependency('simplecov', '~> 0.7.1')
 end

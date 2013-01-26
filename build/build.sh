@@ -5,7 +5,6 @@
 rvm use 1.9.3@golr --create
 bundle
 [ -d rspec ] && rm -rf rspec
-bundle exec rspec --out rspec/rspec.xml --format html --out rspec/rspec.html
+COVERAGE=true bundle exec rspec --out rspec/rspec.xml --format html --out rspec/rspec.html
 
-#[ -d cukeresults ] && rm -rf cukeresults
-#bundle exec cucumber --format junit --out cukeresults --no-source
+exit $?
