@@ -5,6 +5,7 @@ Ruby implementation of GOL, initiated at Global Day of Coderetreat 2012
 
 [![Build Status](https://travis-ci.org/mkrogemann/golr.png)](https://travis-ci.org/mkrogemann/golr)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/mkrogemann/golr)
+[![Dependency Status](https://gemnasium.com/mkrogemann/golr.png)](https://gemnasium.com/mkrogemann/golr)
 
 Next
 
