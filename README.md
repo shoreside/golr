@@ -9,7 +9,8 @@ Ruby implementation of GOL, initiated at Global Day of Coderetreat 2012
 Next
 
 - improve (split) grid_matcher
-- add more examples (dying population, ...)
+- add more examples (dying population, ...), using cucumber
+- simplify and document setup and validation of grid (gamereader/gameprinter/game)
 - eliminate set_alive message
 - make board 'infinite'
 - Visualization
@@ -17,12 +18,15 @@ Next
 
 # Changelog
 
+## 0.4.0
 - rename gem to golr
 - rename github repo to golr
-- add cucumber to do more outside-in testing
 - add .rvmrc
+- add simplecov to track coverage
 - extract Key class
 - cleanup 'require' statements
+- introduce GameReader to simplify acceptance test setup
+- first published version (rubygems.org)
 
 ## 0.3.0
 - there is now an rspec matcher for grids (cell states)
