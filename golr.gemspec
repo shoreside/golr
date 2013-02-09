@@ -14,5 +14,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Golr::VERSION
   gem.add_development_dependency('rspec', '~> 2.12.0')
+  gem.add_development_dependency('cucumber', '~> 1.2.1')
   gem.add_development_dependency('simplecov', '~> 0.7.1')
 end
