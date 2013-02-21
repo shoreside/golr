@@ -1,3 +1,6 @@
+require 'golr/key'
+require 'golr/rules'
+
 module Golr
 
   class Game
