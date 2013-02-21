@@ -8,12 +8,22 @@ golr
 Ruby implementation of [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) initiated at Global Day of Coderetreat 2012 Berlin
 
 Installation
-TBD
+------------
+
+The gem can be installed in the usual ways. Either let bundler take care of it and add to your Gemfile like this:
+
+    gem 'golr'
+
+Or install it directly from your command line
+
+    gem install golr
 
 Usage
+-----
 TBD
 
 What's next?
+------------
 
 - improve (split) grid_matcher
 - add more examples (dying population, ...), using cucumber
