@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.1
+- bugfix: expose relevant classes by requiring them
+
 ## 0.4.0
 - rename gem to golr
 - rename github repo to golr
