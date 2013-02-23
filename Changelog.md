@@ -2,6 +2,8 @@
 
 - remove set_alive method
 - bugfix: columns were incorrectly calculated in GameReader
+- bugfix: off-by-one error in GameReader
+- bugfix: row/column confusion in GamePrinter
 
 ## 0.4.1
 - bugfix: expose relevant classes by requiring them
