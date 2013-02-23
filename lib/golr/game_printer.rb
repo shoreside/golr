@@ -16,8 +16,8 @@ module Golr
     end
 
     def self.print_game_state(game, io)
-      Range.new(1, game.columns).to_a.each do |x|
-        Range.new(1, game.rows).to_a.each do |y|
+      Range.new(1, game.rows).to_a.each do |y|
+        Range.new(1, game.columns).to_a.each do |x|
           printf(io, game.grid[Key.key(x,y)] == true ? 'o' : ' ')
         end
         line_feed(io)
