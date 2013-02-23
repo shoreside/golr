@@ -12,7 +12,7 @@ module Golr
       end
 
       it "a new Game accepts and returns a living cell at any coordinates within its grid boundaries" do
-        key = Key.key(rand(5), rand(5))
+        key = Key.key(rand(5) + 1, rand(5) + 1)
         game = Game.new(5,5, [key])
 
         game.alive?(key).should be_true
@@ -21,7 +21,7 @@ module Golr
 
     context '#neighboring_keys' do
       it "any Game returns 8 neighboring cell coordinates for any given cell coordinate" do
-        x,y = rand(5), rand(5)
+        x,y = rand(5) + 1, rand(5) + 1
         game = Game.new(5,5)
 
         game.neighboring_keys(x,y).size.should == 8
@@ -30,7 +30,7 @@ module Golr
 
     context '#living_neighbors' do
       it "a new Game with one living cell returns zero living cells around that one living cell" do
-        x,y = rand(5), rand(5)
+        x,y = rand(5) + 1, rand(5) + 1
         key = Key.key(x, y)
 
         game = Game.new(5,5, [key])
