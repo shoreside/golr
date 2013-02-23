@@ -4,12 +4,13 @@ module Golr
 
     def self.from_string(multi_line_string)
       keys = []
-      rows = 0
+      row = 1
       columns = count_columns(multi_line_string)
       multi_line_string.split(/\r?\n/).each do |line|
-        keys |= keys_from_line(line, rows).flatten
-        rows += 1
+        keys |= keys_from_line(line, row).flatten
+        row += 1
       end
+      rows = row - 1
       Game.new(columns, rows, keys)
     end
 
@@ -22,7 +23,7 @@ module Golr
     end
 
     def self.keys_from_line(line, row)
-      char_in_line = 0
+      char_in_line = 1
       keys_in_line = []
       line.strip!
       line.gsub!('|','')
