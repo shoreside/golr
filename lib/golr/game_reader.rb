@@ -13,24 +13,24 @@ module Golr
       Game.new(columns, rows, keys)
     end
 
-    
     private
 
     def self.count_columns(multi_line_string)
       first_line = multi_line_string.split(/\r\n?|\n/).first
-      first_line.strip.bytesize - 4 # not nice, but works even on Travis, unlike length.size - 2
+      first_line.strip.bytesize - 2
+      # TODO: not entirely clear why this works even on Travis, while string.size did not
     end
 
     def self.keys_from_line(line, row)
       char_in_line = 0
       keys_in_line = []
-      line.strip!      
-      line.gsub!('|','')      
+      line.strip!
+      line.gsub!('|','')
       line.each_char do |c|
         keys_in_line << Key.key(char_in_line, row) if c == 'o'
-        char_in_line += 1        
-      end               
-      keys_in_line          
+        char_in_line += 1
+      end
+      keys_in_line
     end
 
   end

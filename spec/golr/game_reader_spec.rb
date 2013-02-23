@@ -18,11 +18,11 @@ module Golr
           |        |
         eos
         game = GameReader.from_string(multi_line_description)
-        game.columns.should == 6
+        game.columns.should == 8
         game.rows.should == 7
         io = StringIO.new
         GamePrinter.print(game, io)
-        io.string.should == "\n o     \no      \n  o    \n       \n o o   \n       \n\n"
+        io.string.should == "\n o     \no      \n  o    \n       \n o o   \n       \n    o  \n       \n\n"
       end
 
     end

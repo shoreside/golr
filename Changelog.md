@@ -1,6 +1,7 @@
 # Changelog
 
 - remove set_alive method
+- bugfix: columns were incorrectly calculated in GameReader
 
 ## 0.4.1
 - bugfix: expose relevant classes by requiring them
