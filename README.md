@@ -25,14 +25,13 @@ TBD
 Dependencies / Ruby versions
 ----------------------------
 
-The golr gem has no runtime dependencies. It has been developed in Ruby 1.9.3 but is continuously integrated in Ruby 1.9.3 and 1.8.7, so it will also run in Ruby 1.8.7.
+The gem has no runtime dependencies. It has been developed in Ruby 1.9.3 and is being continuously integrated in Ruby 1.9.3 and 1.8.7.
 
 What's next?
 ------------
 
 - improve (split) grid_matcher
-- add more examples (dying population, ...), using cucumber
-- simplify and document setup and validation of grid (gamereader/gameprinter/game)
+- document setup and validation of grid (gamereader/gameprinter/game)
 - make board 'infinite'
 - Visualization
 - Performance
