@@ -7,7 +7,8 @@ bundle
 [ -d rspec ] && rm -rf rspec
 COVERAGE=true bundle exec rspec --out rspec/rspec.xml --format html --out rspec/rspec.html
 
-[ -d cukeresults ] && rm -rf cukeresults
-COVERAGE=true bundle exec cucumber --format junit --out cukeresults --no-source
+[ -d cucumber ] && rm -rf cucumber
+mkdir cucumber
+COVERAGE=true bundle exec cucumber --format html --out cucumber/cucumber.html --no-source
 
 exit $?

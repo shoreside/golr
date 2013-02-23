@@ -2,5 +2,4 @@
 /rspec
 /Gemfile.lock
 /coverage
-/cukeresults
-
+/cucumber
