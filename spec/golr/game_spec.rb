@@ -53,28 +53,6 @@ module Golr
 
 
     context '#evolve' do
-      it "computes next two generations for an oscillator" do
-        game = Game.new(5,5, ["3_2", "3_3", "3_4"])
-
-        initial_grid = game.grid
-        first_generation = game.evolve.grid
-
-        first_generation[Key.key(2,3)].should be_true
-        first_generation[Key.key(3,3)].should be_true
-        first_generation[Key.key(4,3)].should be_true
-
-        second_generation = game.evolve.grid
-        second_generation.should have_same_cell_states_as initial_grid
-      end
-
-      it "computes a behive which is one example for a still life" do
-        game = Game.new(6,5, ["2_3","3_2","3_4","4_2","4_4","5_3"])
-
-        initial_grid = game.grid
-
-        game.evolve.grid.should have_same_cell_states_as initial_grid
-      end
-
       it "computes a 5-cell glider" do
         game = Game.new(8,8, ["1_2","2_3","3_1","3_2","3_3"])
         initial_grid = game.grid
