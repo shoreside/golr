@@ -28,7 +28,6 @@ What's next?
 - improve (split) grid_matcher
 - add more examples (dying population, ...), using cucumber
 - simplify and document setup and validation of grid (gamereader/gameprinter/game)
-- eliminate set_alive message
 - make board 'infinite'
 - Visualization
 - Performance

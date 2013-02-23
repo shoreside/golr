@@ -1,5 +1,7 @@
 # Changelog
 
+- remove set_alive method
+
 ## 0.4.1
 - bugfix: expose relevant classes by requiring them
 

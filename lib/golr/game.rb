@@ -35,10 +35,6 @@ module Golr
       self
     end
 
-    def set_alive(x, y)
-      @grid[Key.key(x, y)] = true
-    end
-
     def alive?(key)
       @grid[key] == true
     end
