@@ -33,3 +33,34 @@ Feature: Oscillators
     |      |
     |      |
     """
+
+  Scenario: Beacon, an oscillaltor with period 2
+    Given a Game with this initial state
+    """
+    |      |
+    | oo   |
+    | o    |
+    |    o |
+    |   oo |
+    |      |
+    """
+    When I evolve it to its next generation
+    Then the game should be in this state
+    """
+    |      |
+    | oo   |
+    | oo   |
+    |   oo |
+    |   oo|
+    |      |
+    """
+    When I evolve it to its next generation
+    Then the game should be in this state
+    """
+    |      |
+    | oo   |
+    | o    |
+    |    o |
+    |   oo |
+    |      |
+    """
