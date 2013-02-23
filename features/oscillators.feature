@@ -4,7 +4,7 @@ Feature: Oscillators
   And be able to verify that the cells oscillate between two or more states
 
   Scenario: Toad, an oscillaltor with period 2
-    Given A Game with this initial state
+    Given a Game with this initial state
     """
     |      |
     |      |

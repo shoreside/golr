@@ -1,5 +1,5 @@
 
-Given /^A Game with this initial state$/ do |string|
+Given /^a Game with this initial state$/ do |string|
   @game = Golr::GameReader.from_string(string)
 end
 
