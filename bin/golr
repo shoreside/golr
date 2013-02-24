@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+require 'golr'
+require 'optparse'
+
+options = { :generations => 100 }
+
+optparse = OptionParser.new do |opts|
+  opts.banner =
+  "\nUsage: golr game-file [options]\n\nValid options are\n"
+
+  opts.on("-h", "--help", "Print this help") do |h|
+    puts opts.banner
+    puts opts.summarize
+    puts "\n"
+    exit 0
+  end
+
+  opts.on("-g", "--generations [NUMBER]", "Evolve game through this many generations [defaults to 100]") do |g|
+    options[:generations] = g.to_i
+  end
+end
+
+optparse.parse!
+
+# load game from file
+game_file = ARGV[0]
+game_string = File.read(game_file)
+game = Golr::GameReader.from_string(game_string)
+
+# evolve through generations
+generations = options[:generations]
+puts 'Generation #0'
+Golr::GamePrinter.print(game)
+generation = 1
+generations.times.each do
+  game.evolve
+  puts "Generation \##{generation}"
+  Golr::GamePrinter.print(game)
+  generation += 1
+end
