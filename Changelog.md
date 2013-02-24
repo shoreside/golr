@@ -1,10 +1,12 @@
 # Changelog
 
+## 0.4.2
+- add more examples (oscillators, ...), using cucumber
 - remove set_alive method
+- add runner and an example file for game setup (glider)
 - bugfix: columns were incorrectly calculated in GameReader
 - bugfix: off-by-one error in GameReader
 - bugfix: row/column confusion in GamePrinter
-- add more examples (oscillators, ...), using cucumber
 
 ## 0.4.1
 - bugfix: expose relevant classes by requiring them
