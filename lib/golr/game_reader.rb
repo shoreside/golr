@@ -7,7 +7,7 @@ module Golr
       row = 1
       columns = count_columns(multi_line_string)
       multi_line_string.split(/\r?\n/).each do |line|
-        keys |= keys_from_line(line, row).flatten
+        keys |= keys_from_line(line, row)
         row += 1
       end
       rows = row - 1
