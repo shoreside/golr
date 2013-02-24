@@ -79,7 +79,7 @@ Feature: Oscillators
     | oo   |
     | oo   |
     |   oo |
-    |   oo|
+    |   oo |
     |      |
     """
     When I evolve it to its next generation
