@@ -1,7 +1,7 @@
 Feature: Still lifes
   As a user of Golr
   I should be able to specify games that represent Still lifes
-  And be able to verify that the cells states do not change between generations
+  And be able to verify that the cell states do not change between generations
 
   Scenario: Block
     Given a Game with this initial state

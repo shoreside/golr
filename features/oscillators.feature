@@ -3,7 +3,7 @@ Feature: Oscillators
   I should be able to specify games that represent Oscillators
   And be able to verify that the cells oscillate between two or more states
 
-  Scenario: Blinker, an oscillaltor with period 2
+  Scenario: Blinker, an oscillator with period 2
     Given a Game with this initial state
     """
     |     |
@@ -31,7 +31,7 @@ Feature: Oscillators
     |     |
     """
 
-  Scenario: Toad, an oscillaltor with period 2
+  Scenario: Toad, an oscillator with period 2
     Given a Game with this initial state
     """
     |      |
@@ -62,7 +62,7 @@ Feature: Oscillators
     |      |
     """
 
-  Scenario: Beacon, an oscillaltor with period 2
+  Scenario: Beacon, an oscillator with period 2
     Given a Game with this initial state
     """
     |      |
