@@ -25,7 +25,7 @@ TBD
 Dependencies / Ruby versions
 ----------------------------
 
-The gem has no runtime dependencies. It has been developed in Ruby 1.9.3 and is being continuously integrated in Ruby 1.9.3 and 1.8.7.
+The gem has no runtime dependencies. It has been developed in Ruby 1.9.3 and is being continuously integrated in Ruby 2.0.0, 1.9.3 and 1.8.7.
 
 What's next?
 ------------
