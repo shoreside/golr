@@ -1,4 +1,4 @@
-  SimpleCov.start do
-  	add_filter "/spec/"
-  	add_filter "/features/"
-  end
+SimpleCov.start do
+  add_filter "/spec/"
+  add_filter "/features/"
+end
