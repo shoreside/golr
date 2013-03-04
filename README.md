@@ -1,6 +1,7 @@
 golr
 ====
 
+[![Gem Version](https://badge.fury.io/rb/golr.png)](http://badge.fury.io/rb/golr)
 [![Build Status](https://travis-ci.org/mkrogemann/golr.png)](https://travis-ci.org/mkrogemann/golr)
 [![Code Climate](https://codeclimate.com/github/mkrogemann/golr.png)](https://codeclimate.com/github/mkrogemann/golr)
 [![Dependency Status](https://gemnasium.com/mkrogemann/golr.png)](https://gemnasium.com/mkrogemann/golr)
@@ -19,7 +20,7 @@ The gem can be installed in the usual ways. Either let bundler take care of it a
 Or install it directly from your command line
 
     gem install golr
-        
+
 Usage
 -----
 
@@ -30,15 +31,15 @@ You can run Golr by specifying a file that contains the initial state of the gam
 To evolve the game from an initial state given in 'game-file' for e.g. 5 generations, call the executable like this:
 
     golr <game-file> -g 5
-    
+
 So for the example contained in this repo, you could run
-    
+
     golr examples/glider -g 5
-    
+
 If you do not specify a number of generations, its value will default to 100.
 
 Find out more about the options of the 'golr' script by calling
-    
+
     golr -h
 
 
