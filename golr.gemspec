@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Offers methods to initialize and evolve a grid of cells, implementing the rules of Conway's Game of Life}
   gem.summary       = %q{Conway's Game of Life}
   gem.homepage      = "https://github.com/mkrogemann/golr"
+  gem.license       = 'MIT'
 
   gem.files         = Dir['lib/**/*.rb']
   gem.executables   << 'golr'
