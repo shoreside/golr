@@ -1,10 +1,11 @@
 golr
 ====
 
-[![Gem Version](https://badge.fury.io/rb/golr.png)](http://badge.fury.io/rb/golr)
 [![Build Status](https://travis-ci.org/mkrogemann/golr.png)](https://travis-ci.org/mkrogemann/golr)
 [![Code Climate](https://codeclimate.com/github/mkrogemann/golr.png)](https://codeclimate.com/github/mkrogemann/golr)
+[![Coverage Status](https://coveralls.io/repos/mkrogemann/golr/badge.png?branch=master)](https://coveralls.io/r/mkrogemann/golr)
 [![Dependency Status](https://gemnasium.com/mkrogemann/golr.png)](https://gemnasium.com/mkrogemann/golr)
+[![Gem Version](https://badge.fury.io/rb/golr.png)](http://badge.fury.io/rb/golr)
 
 Ruby implementation of [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) initiated at Global Day of Coderetreat 2012 Berlin
 
