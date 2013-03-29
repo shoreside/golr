@@ -6,9 +6,10 @@ module Golr
 
     context '#alive?' do
       it "a new Game returns dead cell for any coordinates within its grid boundaries" do
+        key = Key.key(rand(5) + 1, rand(5) + 1)
         game = Game.new(5,5)
 
-        game.alive?(Key.key(rand(5),rand(5))).should be_false
+        game.alive?(key).should be_false
       end
 
       it "a new Game accepts and returns a living cell at any coordinates within its grid boundaries" do
