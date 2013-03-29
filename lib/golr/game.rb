@@ -28,8 +28,7 @@ module Golr
     def evolve
       next_grid = init_grid
       @grid.each_key do |key|
-        x, y = Key.coordinates(key)
-        next_grid[key] = @rules.evaluate(living_neighbors(x, y), alive?(key))
+        next_grid[key] = @rules.evaluate(living_neighbors(key), alive?(key))
       end
       @grid = next_grid
       self
@@ -39,15 +38,16 @@ module Golr
       @grid[key] == true
     end
 
-    def living_neighbors(x, y)
-      living = neighboring_keys(x,y).inject(0) do |result, key|
-        result += 1 if alive?(key)
+    def living_neighbors(key)
+      living = neighboring_keys(key).inject(0) do |result, _key|
+        result += 1 if alive?(_key)
         result
       end
     end
 
-    def neighboring_keys(x, y)
+    def neighboring_keys(key)
       neighbor_keys = []
+      x,y = Key.coordinates(key)
       ((x-1)..(x+1)).to_a.each do |x_|
         ((y-1)..(y+1)).to_a.each do |y_|
           neighbor_keys << Key.key(x_,y_) unless x == x_ && y == y_
