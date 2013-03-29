@@ -52,8 +52,9 @@ The gem has no runtime dependencies. It has been developed in Ruby 1.9.3 and is 
 What's next?
 ------------
 
-- improve (split) grid_matcher
+- remove key vs x,y confusion
 - document setup and validation of grid (gamereader/gameprinter/game)
 - make board 'infinite'
 - Visualization
 - Performance
+- improve (split) grid_matcher
