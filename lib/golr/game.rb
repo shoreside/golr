@@ -41,8 +41,9 @@ module Golr
     private
 
     def living_neighbors(key)
-      living = neighboring_keys(key).inject(0) do |result, _key|
-        result += 1 if alive?(_key)
+      living_neighbors = neighboring_keys(key).inject(0) do |result, _key|
+        folded_key = fold_key_if_required(_key)
+        result += 1 if alive?(folded_key)
         result
       end
     end
@@ -56,6 +57,15 @@ module Golr
         end
       end
       neighbor_keys
+    end
+
+    def fold_key_if_required(key)
+      x,y = Key.coordinates(key)
+      _x = x < 1 ? @columns : x
+      _x = _x > @columns ? 1 : _x
+      _y = y < 1 ? @rows : y
+      _y = _y > @rows ? 1 : _y
+      Key.key(_x,_y)
     end
 
   end
