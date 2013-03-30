@@ -1,7 +1,7 @@
 Changelog
 =========
 
-Version 0.5.0 - unreleased
+Version 0.5.0
 -------------
 
 * improve readability of Game class: use 'key' instead of (x,y) in all method signatures
