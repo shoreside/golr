@@ -75,6 +75,18 @@ module Golr
 
     end
 
+
+    context '#fold_key_if_required' do
+      it "adjusts x and y if required" do
+        game = Game.new(5,5)
+
+        game.send(:fold_key_if_required, Key.key(-1,5)).should == Key.key(5,5)
+        game.send(:fold_key_if_required, Key.key(0,0)).should == Key.key(5,5)
+        game.send(:fold_key_if_required, Key.key(6,5)).should == Key.key(1,5)
+        game.send(:fold_key_if_required, Key.key(3,6)).should == Key.key(3,1)
+      end
+    end
+
   end
 
 end
