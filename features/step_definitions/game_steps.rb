@@ -17,5 +17,5 @@ Then /^the game should be in this state$/ do |string|
   Golr::GamePrinter.print(expected_game, io_expected)
   Golr::GamePrinter.print(@game, io_actual)
 
-  io_expected.string.should == io_actual.string
+  io_actual.string.should == io_expected.string
 end
