@@ -33,9 +33,13 @@ To evolve the game from an initial state given in 'game-file' for e.g. 5 generat
 
     golr <game-file> -g 5
 
-So for the example contained in this repo, you could run
+So for the examples contained in this repo, you could run
 
-    golr examples/glider -g 5
+    golr examples/glider -g 500
+
+or
+
+    golr examples/lwss -g300
 
 If you do not specify a number of generations, its value will default to 100.
 
