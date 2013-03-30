@@ -52,6 +52,29 @@ module Golr
       end
     end
 
+
+    context '#evolve' do
+      it "computes a 5-cell glider" do
+        game = Game.new(8,8, ["1_2","2_3","3_1","3_2","3_3"])
+        initial_grid = game.grid
+        # run through 4 iterations and check for down-right-shifted glider
+        4.times.each { game.evolve }
+        shifted_glider = game.grid
+
+        shifted_glider[Key.key(1,2)].should be_false
+        shifted_glider[Key.key(3,1)].should be_false
+        shifted_glider[Key.key(3,2)].should be_false
+        shifted_glider[Key.key(3,3)].should be_false
+
+        shifted_glider[Key.key(2,3)].should be_true
+        shifted_glider[Key.key(3,4)].should be_true
+        shifted_glider[Key.key(4,2)].should be_true
+        shifted_glider[Key.key(4,3)].should be_true
+        shifted_glider[Key.key(4,4)].should be_true
+      end
+
+    end
+
   end
 
 end
