@@ -53,7 +53,6 @@ What's next?
 ------------
 
 - document setup and validation of grid (gamereader/gameprinter/game)
-- make board 'infinite'
 - Visualization (ncurses)
 - Performance
 - improve (split) grid_matcher

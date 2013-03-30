@@ -9,6 +9,7 @@ Version 0.5.0 - unreleased
 * add example file for Lightweight spaceship (LWSS)
 * add borders to output of game_printer
 * make methods that are not part of public API private in game.rb
+* board/grid is now 'infinite' (in reality its folded at the edges)
 
 Version 0.4.2
 -------------
