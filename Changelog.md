@@ -1,6 +1,12 @@
 Changelog
 =========
 
+
+Version 0.5.1 - unreleased
+-------------
+
+* make private/public accessibility more fine grained in game.rb
+
 Version 0.5.0
 -------------
 

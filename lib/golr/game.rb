@@ -24,6 +24,7 @@ module Golr
       end
       new_grid
     end
+    private :init_grid
 
     def evolve
       next_grid = init_grid
@@ -38,8 +39,6 @@ module Golr
       @grid[key] == true
     end
 
-    private
-
     def living_neighbors(key)
       living_neighbors = neighboring_keys(key).inject(0) do |result, _key|
         folded_key = fold_key_if_required(_key)
@@ -47,6 +46,7 @@ module Golr
         result
       end
     end
+    private :living_neighbors
 
     def neighboring_keys(key)
       neighbor_keys = []
@@ -58,6 +58,7 @@ module Golr
       end
       neighbor_keys
     end
+    private :neighboring_keys
 
     def fold_key_if_required(key)
       x,y = Key.coordinates(key)
@@ -67,6 +68,7 @@ module Golr
       _y = _y > @rows ? 1 : _y
       Key.key(_x,_y)
     end
+    private :fold_key_if_required
 
   end
 
