@@ -8,6 +8,7 @@ Version 0.5.0 - unreleased
 * add cucumber feature for Spaceships
 * add example file for Lightweight spaceship (LWSS)
 * add borders to output of game_printer
+* make methods that are not part of public API private in game.rb
 
 Version 0.4.2
 -------------
