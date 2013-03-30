@@ -1,7 +1,7 @@
 Feature: Spaceships
   As a user of Golr
   I should be able to specify games that represent Spaceships
-  And be able to verify that the active cells travel in stages from upper left to lower right ares of the game grid
+  And be able to verify that the active cells travel across the grid and the original shape is repeated periodically
 
   Scenario: 5-cell Glider
     Given a Game with this initial state
