@@ -5,6 +5,7 @@ Version 0.4.3 - unreleased
 -------------
 
 * improve readability of Game class: use 'key' instead of (x,y) in all method signatures
+* Add cucumber feature for Spaceships
 
 Version 0.4.2
 -------------
