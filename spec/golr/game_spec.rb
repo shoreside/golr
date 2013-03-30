@@ -25,7 +25,7 @@ module Golr
         key = Key.key(rand(5) + 1, rand(5) + 1)
         game = Game.new(5,5)
 
-        game.neighboring_keys(key).size.should == 8
+        game.send(:neighboring_keys, key).size.should == 8
       end
     end
 
@@ -36,19 +36,19 @@ module Golr
 
         game = Game.new(5,5, [key])
 
-        game.living_neighbors(key).should == 0
+        game.send(:living_neighbors, key).should == 0
       end
 
       it "a new Game with two adjacent living cells returns a count of one living cell around the initial living cell" do
         game = Game.new(5,5, ["2_3", "2_4"])
 
-        game.living_neighbors(Key.key(2,3)).should == 1
+        game.send(:living_neighbors, Key.key(2,3)).should == 1
       end
 
       it "a new Game with three adjacent living cells returns a count of two living cells around the initial living cell" do
         game = Game.new(5,5, ["2_3", "2_4", "3_3"])
 
-        game.living_neighbors(Key.key(2,3)).should == 2
+        game.send(:living_neighbors, Key.key(2,3)).should == 2
       end
     end
 

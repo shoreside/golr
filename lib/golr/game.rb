@@ -38,6 +38,8 @@ module Golr
       @grid[key] == true
     end
 
+    private
+
     def living_neighbors(key)
       living = neighboring_keys(key).inject(0) do |result, _key|
         result += 1 if alive?(_key)
