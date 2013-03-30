@@ -48,9 +48,9 @@ module Golr
     def neighboring_keys(key)
       neighbor_keys = []
       x,y = Key.coordinates(key)
-      ((x-1)..(x+1)).to_a.each do |x_|
-        ((y-1)..(y+1)).to_a.each do |y_|
-          neighbor_keys << Key.key(x_,y_) unless x == x_ && y == y_
+      ((x-1)..(x+1)).to_a.each do |_x|
+        ((y-1)..(y+1)).to_a.each do |_y|
+          neighbor_keys << Key.key(_x,_y) unless x == _x && y == _y
         end
       end
       neighbor_keys
