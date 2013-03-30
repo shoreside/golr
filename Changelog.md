@@ -5,7 +5,9 @@ Version 0.4.3 - unreleased
 -------------
 
 * improve readability of Game class: use 'key' instead of (x,y) in all method signatures
-* Add cucumber feature for Spaceships
+* add cucumber feature for Spaceships
+* add example file for Lightweight spaceship (LWSS)
+* add borders to output of game_printer
 
 Version 0.4.2
 -------------
