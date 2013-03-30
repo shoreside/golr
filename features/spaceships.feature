@@ -73,3 +73,94 @@ Feature: Spaceships
     |          |
     |          |
     """
+
+  Scenario: Lightweight spaceship (LWSS)
+    Given a Game with this initial state
+    """
+    |              |
+    |              |
+    |    oo        |
+    |  oo oo       |
+    |  oooo        |
+    |   oo         |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    """
+    When I evolve it to its next generation
+    Then the game should be in this state
+    """
+    |              |
+    |              |
+    |   oooo       |
+    |  o   o       |
+    |      o       |
+    |  o  o        |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    """
+    When I evolve it to its next generation
+    Then the game should be in this state
+    """
+    |              |
+    |    oo        |
+    |   oooo       |
+    |   oo oo      |
+    |     oo       |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    """
+    When I evolve it to its next generation
+    Then the game should be in this state
+    """
+    |              |
+    |   o  o       |
+    |       o      |
+    |   o   o      |
+    |    oooo      |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    """
+    When I evolve it to its next generation
+    Then the game should be in this state
+    """
+    |              |
+    |              |
+    |      oo      |
+    |    oo oo     |
+    |    oooo      |
+    |     oo       |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    |              |
+    """
