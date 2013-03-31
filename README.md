@@ -58,5 +58,6 @@ What's next?
 
 - document setup and validation of grid (gamereader/gameprinter/game)
 - Visualization (ncurses)
+- alternative game rules
 - Performance
 - improve (split) grid_matcher
