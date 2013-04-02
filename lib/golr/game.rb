@@ -69,7 +69,5 @@ module Golr
       Key.key(_x,_y)
     end
     private :fold_key_if_required
-
   end
-
 end
